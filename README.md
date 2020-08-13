@@ -28,6 +28,6 @@ Article.update(
  
  ```
  
- The above is a Mongoose method (update()) where the $set flag will allow us to specify the values we want to see updated, but in order to dynamically pick which field provided by the user (via Postman) has to be updated, we need to assign to the $set flag the entire req.body which is a JS object yielded by body-parser. Body-parser will also pick out the fields in req.body. Therefore, we are able to update our database for only the fields that have a new value.
+ The above is a Mongoose method (update) where the $set flag will allow us to specify the values we want to see updated. But in order to dynamically pick which field provided by the user (via Postman) has to be updated, we need to assign to the $set flag the entire req.body which is a JS object yielded by body-parser. Body-parser will also pick out the fields in req.body. Therefore, we are able to update our database for only the fields that have a new value.
 
 
