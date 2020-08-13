@@ -13,23 +13,24 @@ To make this API RESTful , I followed two main rules when implementing it :
 2. Use Specific Pattern of Routes/Endpoint URLs
 
 
-The HTTP Request Verbs are GET, POST, PUT, PATCH and DELETE.
+The HTTP Request Verbs are **GET, POST, PUT, PATCH and DELETE**.
 
 The specific patterns of routes/endpoints URL pertains to the "behaviour" of HTTP verbs depending on the route we are trying to reach  :
 
-/articles
-	• GET : Should retrieve all articles
-	• POST: Create one new article
-	• PUT: - 
-	• PATCH: -
-	• DELETE:Delete all the articles
+* /articles
+  * GET : Should retrieve all articles
+  * POST: Create one new article
+  * PUT: - 
+  * PATCH: -
+  * DELETE:Delete all the articles
 
-/articles/chuck-norris
-	• GET : Fetches the article  on Chuck Norris
-	• POST: -
-	• PUT: Update the article on Chuck Norris
-	• PATCH: Update the article on Chuck Norris
-	• DELETE: Delete the article on Chuck Norris
+
+* /articles/chuck-norris
+  * GET : Fetches the article  on Chuck Norris
+  * POST: -
+  * PUT: Update the article on Chuck Norris
+  * PATCH: Update the article on Chuck Norris
+  * DELETE: Delete the article on Chuck Norris
 
 
 For this project, Node/Express, MongoDB, Mongoose were used to make the API while Postman and Robo 3T were used to test it.
@@ -54,5 +55,3 @@ Article.update(
  ```
  
  The above is a Mongoose method (update) where the $set flag will allow us to specify the values we want to see updated. But in order to dynamically pick which field provided by the user (via Postman) has to be updated, we need to assign to the $set flag the entire req.body which is a JS object yielded by body-parser. Body-parser will also pick out the fields in req.body. Therefore, we are able to update our database for only the fields that have a new value.
-
-
